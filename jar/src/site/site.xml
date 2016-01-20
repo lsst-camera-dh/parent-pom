@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="org-glast-maven-project">
+    <bannerLeft>
+        <name>GLAST Maven JAR Projects</name>
+        <href>http://glast-ground.slac.stanford.edu/</href>
+    </bannerLeft>
+
+    <bannerRight>
+        <name>SLAC</name>
+        <src>http://home.slac.stanford.edu/images/slacHeaderLogo.gif</src>
+        <href>http://slac.stanford.edu/</href>
+    </bannerRight>
+
+
+    <body>
+    
+        <menu name="General">
+            <item name="Introduction" href="index.html"/>
+            <item name="Team" href="team-list.html"/>
+            <item name="License" href="license.html"/>
+            <item name="Mailing Lists" href="mail-lists.html"/>
+        </menu>
+
+        <menu name="Libraries">
+        	<item name = "Application"                         href="./org-glast-base-application"/>
+        	<item name = "Group Manager"                       href="./org-glast-groupmanager-jar"/>
+        	<item name = "Web Base"                            href="./org-glast-base-web"/>
+        </menu>
+
+        <menu name="Related">
+        	<item name = "Home"                         href="https://glast-ground.slac.stanford.edu/docs/maven2/"/>
+        	<item name = "Maven GLAST WARS"                   href="../org-glast-maven-war-project/"/>
+        </menu>
+
+        <menu ref="reports"/>
+
+
+    </body>
+</project>

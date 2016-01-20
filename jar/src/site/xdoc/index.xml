@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+  <body>
+    <section name="Parent pom for JAR projects">
+      <p>
+          All JAR projects should inherit from this POM.
+      </p>
+    </section>
+  </body>
+</document>

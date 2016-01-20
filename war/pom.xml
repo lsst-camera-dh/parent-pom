@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.lsst.camera</groupId>
+        <artifactId>org-lsst-camera-maven-project</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>org-lsst-camera-maven-project-war</artifactId>
+    <packaging>pom</packaging>
+    <name>LSST DH Parent War</name>
+
+        
+    <dependencies>
+        <dependency>
+            <groupId>srs</groupId>
+            <artifactId>org-srs-sitemesh-web</artifactId>
+            <version>1.7</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>displaytag</groupId>
+            <artifactId>displaytag</artifactId>
+            <version>1.2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jcl104-over-slf4j</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <filters>
+            <filter>${project.build.outputDirectory}/projectBuild.properties</filter>
+        </filters>
+        <finalName />
+        <plugins>
+            <plugin>
+                <groupId>srs</groupId>
+                <artifactId>org-srs-tomcat-deploy-maven-plugin</artifactId>
+                <version>1.3</version>
+                <configuration>
+                    <application>${project.build.finalName}</application>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>findserver</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.0</version>
+                <configuration>
+                    <url>http://${tomcat.server.hostname}:${tomcat.server.httpport}/manager/text</url>
+                    <server>${tomcat.server.managerid}</server>
+                    <path>/${project.build.finalName}</path>
+                    <update>true</update>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>tomcat-maven-plugin</artifactId>
+                <version>1.1</version>
+                <configuration>
+                    <url>http://${tomcat.server.hostname}:${tomcat.server.httpport}/manager</url>
+                    <server>${tomcat.server.managerid}</server>
+                    <path>/${project.build.finalName}</path>
+                    <update>true</update>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>makeLoggingPropertiesFile</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <!--
+                            <target unless="skip.logging.properties">
+                            -->
+                            <target if="create.logging.properties">
+                                <echo message="Creating logging.properties" />
+                                <echo file="${project.build.outputDirectory}/logging.properties" message="handlers = org.apache.juli.FileHandler${line.separator}" />
+                                <echo file="${project.build.outputDirectory}/logging.properties" message="org.apache.juli.FileHandler.level = FINE${line.separator}" append="true" />
+                                <echo file="${project.build.outputDirectory}/logging.properties" message="org.apache.juli.FileHandler.directory = ${catalina.base}/logs${line.separator}" append="true" />
+                                <echo file="${project.build.outputDirectory}/logging.properties" message="org.apache.juli.FileHandler.prefix = ${project.build.finalName}.${line.separator}" append="true" />
+                            </target>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>makeProjectBuildFile</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <!--
+                                <mkdir dir="${project.build.outputDirectory}" />
+                                -->
+                                <tstamp>
+                                    <format property="last.updated" pattern="yyyy-MM-dd hh:mm:ss" />
+                                </tstamp>
+                                <echo message="Creating projectBuild.properties" />
+                                <echo file="${project.build.outputDirectory}/projectBuild.properties" message="build.time=${last.updated}${line.separator}" />
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.cargo</groupId>
+                    <artifactId>cargo-maven2-plugin</artifactId>
+                    <version>1.1.2</version>
+                    <configuration>
+                        <container>
+                            <containerId>tomcat6x</containerId>
+                            <type>remote</type>
+                        </container>
+                        <configuration>
+                            <type>runtime</type>
+                            <properties>
+                                <cargo.hostname>${tomcat.server.hostname}</cargo.hostname>
+                                <cargo.remote.username>${appserver.username}</cargo.remote.username>
+                                <cargo.remote.password>${appserver.password}</cargo.remote.password>
+                            </properties>
+                        </configuration>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.1.1</version>
+                    <configuration>
+                        <!-- This allows filtering of web.xml, which allows resources (such as ${pom.version} to be inserted) -->
+                        <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
+                        <warSourceExcludes>**/antrun/**</warSourceExcludes>
+                        <dependentWarExcludes>**/antrun/**</dependentWarExcludes>
+                    </configuration>
+                </plugin>
+            </plugins>
+
+        </pluginManagement>
+    </build>
+
+
+    <!-- These are the default properties. They can be overwritten by the profiles for individual experiments -->
+    <properties>
+        <netbeans.hint.deploy.server>Tomcat60</netbeans.hint.deploy.server>
+        <deployment.mode>local</deployment.mode>
+        <experiment.name>LSST-CAMERA</experiment.name>
+        <experiment.server.base.url>http://srs.slac.stanford.edu/</experiment.server.base.url>
+        <experiment.filter.experiment>LSST-CAMERA</experiment.filter.experiment>
+        <experiment.configuration.database>jdbc/config-srs</experiment.configuration.database>
+        <experiment.servermapping.server>glastlnx18.slac.stanford.edu</experiment.servermapping.server>
+        <experiment.servermapping.port>8180</experiment.servermapping.port>
+        <experiment.groupaccess />
+    </properties>
+
+
+    <profiles>
+        <profile>
+            <id>deploy-local</id>
+            <properties>
+                <deployment.mode>local</deployment.mode>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <configuration>
+                            <!-- Exlude logging.properties file when local deployment -->
+                            <packagingExcludes>**/logging.properties</packagingExcludes>
+                            <warSourceExcludes>**/logging.properties</warSourceExcludes>
+                            <dependentWarExcludes>**/logging.properties</dependentWarExcludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>deploy-dev</id>
+            <properties>
+                <create.logging.properties>true</create.logging.properties>
+                <deployment.mode>dev</deployment.mode>
+            </properties>
+        </profile>
+        <profile>
+            <id>deploy-prod</id>
+            <properties>
+                <create.logging.properties>true</create.logging.properties>
+                <deployment.mode>prod</deployment.mode>
+            </properties>
+        </profile>
+        <profile>
+            <id>CDMS</id>
+            <properties>
+                <experiment.name>CDMS</experiment.name>
+                <experiment.server.base.url>http://srs.slac.stanford.edu/</experiment.server.base.url>
+                <experiment.filter.experiment>CDMS</experiment.filter.experiment>
+                <experiment.configuration.database>jdbc/config-srs</experiment.configuration.database>
+                <experiment.servermapping.server>glastlnx18.slac.stanford.edu</experiment.servermapping.server>
+                <experiment.servermapping.port>8180</experiment.servermapping.port>
+            </properties>
+        </profile>
+        <profile>
+            <id>LSST-CAMERA</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <experiment.name>LSST-CAMERA</experiment.name>
+                <experiment.filter.experiment>LSST-CAMERA</experiment.filter.experiment>
+                <experiment.configuration.database>jdbc/config-srs</experiment.configuration.database>
+                <experiment.servermapping.server>glastlnx18.slac.stanford.edu</experiment.servermapping.server>
+                <experiment.servermapping.port>8080</experiment.servermapping.port>
+            </properties>
+        </profile>
+    </profiles>
+
+
+</project>

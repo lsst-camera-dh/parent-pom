@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="org-srs-maven-project">
+    <bannerLeft>
+        <name>SRS Maven WAR Projects</name>
+        <href>http://srs.slac.stanford.edu/</href>
+    </bannerLeft>
+
+    <bannerRight>
+        <name>SLAC</name>
+        <src>http://home.slac.stanford.edu/images/slacHeaderLogo.gif</src>
+        <href>http://slac.stanford.edu/</href>
+    </bannerRight>
+
+
+    <body>
+    
+        <menu name="General">
+            <item name="Introduction" href="index.html"/>
+            <item name="Team" href="team-list.html"/>
+            <item name="License" href="license.html"/>
+            <item name="Mailing Lists" href="mail-lists.html"/>
+        </menu>
+
+        <menu name="Web Applications">
+        	<item name = "Group Manager"                      href="org-srs-groupmanager-war"/>
+        	<item name = "Server Mapping"                      href="org-srs-servermapping-web"/>
+        </menu>
+
+        <menu ref="reports"/>
+
+    </body>
+</project>
