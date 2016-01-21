@@ -28,6 +28,12 @@
             <email>jrb@SLAC.Stanford.EDU</email>
             <organization>SLAC, Stanford Linear Accelerator Center</organization>
         </developer>
+        <developer>
+            <id>focke</id>
+            <name>Warrent Focke</name>
+            <email>focke@SLAC.Stanford.EDU</email>
+            <organization>SLAC, Stanford Linear Accelerator Center</organization>
+        </developer>
     </developers>
 
     <issueManagement>
@@ -77,21 +83,13 @@
         </repository>
     </repositories>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>srs-maven2-public</id>
-            <name>SRS Maven 2 central repository</name>
-            <url>http://srs.slac.stanford.edu/nexus/content/groups/srs-maven2-public/</url>
-        </pluginRepository>
-    </pluginRepositories>
-
     <dependencies>
     
         <!-- Junit everybody needs it -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.2</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
 
