@@ -83,6 +83,14 @@
         </repository>
     </repositories>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>srs-maven2-public</id>
+            <name>SRS Maven 2 central repository</name>
+            <url>http://srs.slac.stanford.edu/nexus/content/groups/srs-maven2-public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <dependencies>
     
         <!-- Junit everybody needs it -->
