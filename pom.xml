@@ -36,6 +36,13 @@
         </developer>
     </developers>
 
+    <scm>
+        <url>https://github.com/lsst-camera-dh/parent-pom</url>
+        <connection>scm:git:git://github.com/lsst-camera-dh/parent-pom.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/lsst-camera-dh/parent-pom.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <issueManagement>
         <url>http://jira.slac.stanford.edu/</url>
     </issueManagement>
@@ -138,6 +145,15 @@
             </extension>
         </extensions>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <preparationGoals>clean install</preparationGoals>
+                    <localCheckout>true</localCheckout>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-scm-plugin</artifactId>
