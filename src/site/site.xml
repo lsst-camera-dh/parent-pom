@@ -2,7 +2,6 @@
 <project name="org-srs-maven-project">
     <bannerLeft>
         <name>LSST Data Handling Maven Projects</name>
-        <href>../../org-srs-maven-project/latestRelease/</href>
     </bannerLeft>
 
     <bannerRight>
