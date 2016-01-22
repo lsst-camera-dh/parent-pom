@@ -8,13 +8,13 @@
             <table> 
                 <tr>  
                     <td>
-                        <a href="../org-lsst-camera-etraveler-frontend/">Frontend</a>
+                        <a href="/nexus/content/sites/lsst-dh-site/content/org-lsst-camera-maven-project-jar/org-lsst-camera-etraveler-frontend/">Frontend</a>
                     </td>
                     <td>Frontend ETraveler Application.</td>
                 </tr>      
                 <tr>  
                     <td>
-                        <a href="../org-lsst-camera-etraveler-backend/">Backend</a>
+                        <a href="/nexus/content/sites/lsst-dh-site/content/org-lsst-camera-maven-project-war/org-lsst-camera-etraveler-backend/">Backend</a>
                     </td>
                     <td>Traveler Definition.</td>
                 </tr>      
@@ -24,7 +24,7 @@
             <table> 
                 <tr>  
                     <td>
-                        <a href="/content/org-lsst-camera-maven-project-jar/snakeyaml/">Yaml</a>
+                        <a href="/nexus/content/sites/lsst-dh-site/content/org-lsst-camera-maven-project-jar/snakeyaml/">Yaml</a>
                     </td>
                     <td>YAML Library.</td>
                 </tr>      
