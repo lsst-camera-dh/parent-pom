@@ -13,83 +13,15 @@
 
 
     <body>
-        <links>
-            <item name="Latest Release" href="../latestRelease/"/>
-            <item name="Latest Snapshot" href="../latestSnapshot/"/>
-            <item name="All Versions" href="../"/>
-        </links>
     
-        <menu name="General SRS" inherit="bottom">
-            <item name="Home" href="../../org-srs-maven-project/latestRelease/"/>
-            <item name="Introduction" href="../../org-srs-maven-project/latestRelease/index.html"/>
-            <item name="Team" href="../../org-srs-maven-project/latestRelease/team-list.html"/>
-        </menu>
-
-        <menu name="Basic Web Applications" inherit="bottom">
-        	<item name = "Batch Allocations" href="../../org-srs-batch-allocations/latestRelease/"/>
-        	<item name = "CAS" href="../../org-srs-cas/latestRelease/"/>
-        	<item name = "Commons" href="../../org-srs-commons-web/latestRelease/"/>
-        	<item name = "Decorator" href="../../org-srs-decorator/latestRelease/"/>
-        	<item name = "Image Handler" href="../../org-srs-image-handler-web/latestRelease/"/>
-        	<item name = "Resources" href="../../org-srs-resources-web/latestRelease/"/>
-        	<item name = "Server Mapping" href="../../org-srs-servermapping-web/latestRelease/"/>
-        	<item name = "Server Monitoring" href="../../org-srs-servermonitoring-web/latestRelease/"/>
-        	<item name = "Shift Schedule" href="../../org-srs-shiftschedule-web/latestRelease/"/>
-        </menu>
-
-        <menu name="Pipeline" inherit="bottom">
-        	<item name = "Client" href="../../org-srs-pipeline-client/latestRelease/"/>
-        	<item name = "Server" href="../../org-srs-pipeline-server/latestRelease/"/>
-        	<item name = "Stored Procedures" href="../../org-srs-pipeline-sp/latestRelease/"/>
-        	<item name = "Web Front End" href="../../org-srs-pipeline-web/latestRelease/"/>
-        </menu>
-
-        <menu name="Data Catalog" inherit="bottom">
-        	<item name = "Client" href="../../org-srs-datacat-client/latestRelease/"/>
-        	<item name = "Server" href="../../org-srs-datacat-server/latestRelease/"/>
-        	<item name = "Stored Procedures" href="../../org-srs-datacat-sp/latestRelease/"/>
-        	<item name = "Web Front End" href="../../org-srs-datacatalog-web/latestRelease/"/>
-        </menu>
-
-
-        <menu name="Group/User Manager" inherit="bottom">
-        	<item name = "Java Library" href="../../org-srs-groupmanager-jar/latestRelease/"/>
-        	<item name = "Web Library" href="../../org-srs-groupmanager-web/latestRelease/"/>
-        	<item name = "Web Front End" href="../../org-srs-groupmanager-war/latestRelease/"/>
-        </menu>
-
-        <menu name="Portal" inherit="bottom">
-        	<item name = "Java Library" href="../../org-srs-portal-jar/latestRelease/"/>
-        	<item name = "Web Front End" href="../../org-srs-portal-web/latestRelease/"/>
-        </menu>
-
-        <menu name="Download Manager" inherit="bottom">
-        	<item name = "Client" href="../../org-srs-downloadmanager-client/latestRelease/"/>
-        	<item name = "Web Front End" href="../../org-srs-downloadmanager-web/latestRelease/"/>
+        <menu name="ETraveler" inherit="bottom">
+            <item name="Frontend" href="../../org-lsst-ccs-etraveler-frontend/"/>
+            <item name="Backend" href="../../org-lsst-ccs-etraveler-backend/"/>
         </menu>
 
         <menu name="Libraries" inherit="bottom">
-        	<item name = "Application"                         href="../../org-srs-base-application/latestRelease/"/>
-        	<item name = "Data Handling Commons"               href="../../org-srs-datahandling-common/latestRelease/"/>
-        	<item name = "Data Portal Model"                   href="../../org-srs-dataportal-model/latestRelease/"/>
-        	<item name = "Job Control"                   href="../../org-srs-jobcontrol/latestRelease/"/>
-        	<item name = "Web Base"                            href="../../org-srs-web-base/latestRelease/"/>
+            <item name="Yaml" href="../../snakeyaml/"/>
         </menu>
-
-
-
-        <menu name="Tools" inherit="bottom">
-        	<item name = "DataInfo"                       href="../../org-srs-datainfo/latestRelease/"/>
-        	<item name = "Sitemesh"                       href="../../org-srs-sitemesh-web/latestRelease/"/>
-        </menu>
-
-
-
-
-        <menu name="Plugins" inherit="bottom">
-        	<item name = "Tomcat Deploy"                       href="../../org-srs-tomcat-deploy-maven-plugin/latestRelease/"/>
-        </menu>
-
 
         <menu ref="reports" inherit="bottom" />
 

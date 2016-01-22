@@ -1,222 +1,35 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document>
     <properties>
-        <title>SRS Maven Projects</title>
+        <title>LSST Data Handling Projects</title>
     </properties>
     <body>
-        <section name="Overview">
-            <p>
-                These are the Scientific Research Software (SRS) maven projects of the 
-                <a href="https://confluence.slac.stanford.edu/x/aowYBQ">Scientific Computing Applications (SCA) department</a>.
-            </p>
-            <p>
-                We provide a set of web applications and java libraries for helping small and large scale projects manage their users, data handling, data processing and data visualization.
-                These web applications are all experiment independent and easily customizable to meet the needs of our users.
-            </p>
-        </section>
-    
-
-    
-    
-        <subsection name="Basic Web Applications"> 
-            <p>
-                The following is a list of the Basic Web Applications we provide and support.
-            </p>
+        <subsection name="ETraveler"> 
             <table> 
                 <tr>  
                     <td>
-                        <a href="../../org-srs-batch-allocations/latestRelease/">Batch Allocations</a>
+                        <a href="../../org-lsst-camera-etraveler-frontend/">Frontend</a>
                     </td>
-                    <td>Shows how the SLAC Batch farm allocations are used.</td>
+                    <td>Frontend ETraveler Application.</td>
                 </tr>      
                 <tr>  
                     <td>
-                        <a href="../../org-srs-cas/latestRelease/">CAS</a>
+                        <a href="../../org-lsst-camera-etraveler-backend/">Backend</a>
                     </td>
-                    <td>Single Sign On Service based on 
-                        <a href="http://www.jasig.org/cas">Jasig Cas.</a>
+                    <td>Traveler Definition</a>
                     </td>
                 </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-commons-web/latestRelease/">Commons</a>
-                    </td>
-                    <td>Utility Web application to propagate look and feel and utilities, like calendars, to all other web applications.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-decorator/latestRelease/">Decorator</a>
-                    </td>
-                    <td>It provides user an easy way to access their documents on the file system, browse and download them.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-image-handler-web/latestRelease/">Image Handler</a>
-                    </td>
-                    <td>Utility web application to provide images to other web applications.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-resources-web/latestRelease/">Resources</a>
-                    </td>
-                    <td>Utility web application display trending plots of how resources are used.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-servermapping-web/latestRelease/">Server Mapping</a>
-                    </td>
-                    <td>Integrated with our build/deployment system it maps web applications to the deployment server for the given environment (dev,prod).</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-servermonitoring-web/latestRelease/">Server Monitoring</a>
-                    </td>
-                    <td>Simple Monitoring web application to assess the health and safety of a set of web servers</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-shiftschedule-web/latestRelease/">Shift Schedule</a>
-                    </td>
-                    <td>An application to plan and schedule shifts.</td>
-                </tr>      
-
             </table>
-                                                
         </subsection>
-
-        <subsection name="Pipeline"> 
-            <p>
-                The processing pipeline.
-            </p>
+        <subsection name="Libraries"> 
             <table> 
                 <tr>  
                     <td>
-                        <a href="../../org-srs-pipeline-client/latestRelease/">Pipeline Client</a>
+                        <a href="../../snakeyaml/">Yaml</a>
                     </td>
-                    <td>A java library to interact with the Pipeline Server.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-pipeline-server/latestRelease/">Pipeline Server</a>
-                    </td>
-                    <td>The implementation of the Pipeline Server.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-pipeline-sp/latestRelease/">Pipeline Stored Procedures</a>
-                    </td>
-                    <td>Java implementation of the Pipeline Stored Procedures.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-pipeline-web/latestRelease/">Pipeline Web Front End</a>
-                    </td>
-                    <td>The Pipeline Front End.</td>
+                    <td>YAML Library.</td>
                 </tr>      
             </table>
         </subsection>
-
-        <subsection name="Data Catalog"> 
-            <p>
-                The Data Catalog.
-            </p>
-            <table> 
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-datacat-client/latestRelease/">Data Catalog Client</a>
-                    </td>
-                    <td>A java library to interact with the Pipeline Server.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-datacat-server/latestRelease/">Data Catalog Server</a>
-                    </td>
-                    <td>The implementation of the Pipeline Server.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-datacat-sp/latestRelease/">Data Catalog Stored Procedures</a>
-                    </td>
-                    <td>Java implementation of the Pipeline Stored Procedures.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-datacatalog-web/latestRelease/">Data Catalog Web Front End</a>
-                    </td>
-                    <td>The Pipeline Front End.</td>
-                </tr>      
-            </table>
-        </subsection>
-        
-    
-        <subsection name="Group/User Manager"> 
-            <p>
-                It helps experiment keeping user's records up to date, managing their information. It also provides a way to manage groups for propagating authorization to other web applications.
-            </p>
-            <table> 
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-groupmanager-jar/latestRelease/">Java Library</a>
-                    </td>
-                    <td>A java library to interact with the Group Manager.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-groupmanager-web/latestRelease/">Web Library</a>
-                    </td>
-                    <td>A java library to be used from web application for authorization purposes or to fetch user's information.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-groupmanager-war/latestRelease/">Web Front End</a>
-                    </td>
-                    <td>The Group/User Manager front end.</td>
-                </tr>      
-            </table>
-        </subsection>
-            
-        <subsection name="Portal"> 
-            <p>
-                The Portal is meant to be the entry point for a project or experiment. It helps managing menu bars for categorizing helpful links and steering users in the right direction.
-            </p>
-            <table> 
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-portal-jar/latestRelease/">Java Library</a>
-                    </td>
-                    <td>A java library to interact with the Portal.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-portal-web/latestRelease/">Portal Web Front End</a>
-                    </td>
-                    <td>The Portal front end.</td>
-                </tr>      
-            </table>
-        </subsection>
-            
-        <subsection name="Download Manager"> 
-            <p>
-                This set of libraries are used to download files either from the command line of from the web environment.
-            </p>
-            <table> 
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-downloadmanager-client/latestRelease/">Download Manager Client</a>
-                    </td>
-                    <td>A java library to download files from the command line.</td>
-                </tr>      
-                <tr>  
-                    <td>
-                        <a href="../../org-srs-downloadmanager-web/latestRelease/">Download Manager Web Front End</a>
-                    </td>
-                    <td>The Download Manager Front end.</td>
-                </tr>      
-            </table>
-        </subsection>
-
-
-            
-            
     </body>
 </document>
