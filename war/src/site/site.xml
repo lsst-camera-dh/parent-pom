@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="org-srs-maven-project">
+<project name="org-lsst-ccs-project-pom">
     <bannerLeft>
-        <name>SRS Maven WAR Projects</name>
-        <href>http://srs.slac.stanford.edu/</href>
+        <name>LSST Data Handling Projects</name>
+        <href>http://lsst-camera.slac.stanford.edu/</href>
     </bannerLeft>
 
     <bannerRight>
@@ -21,12 +21,8 @@
             <item name="Mailing Lists" href="mail-lists.html"/>
         </menu>
 
-        <menu name="Web Applications">
-        	<item name = "Group Manager"                      href="org-srs-groupmanager-war"/>
-        	<item name = "Server Mapping"                      href="org-srs-servermapping-web"/>
-        </menu>
-
         <menu ref="reports"/>
+
 
     </body>
 </project>
