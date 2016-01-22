@@ -15,12 +15,12 @@
     <body>
     
         <menu name="ETraveler" inherit="bottom">
-            <item name="Frontend" href="../../org-lsst-ccs-etraveler-frontend/"/>
-            <item name="Backend" href="../../org-lsst-ccs-etraveler-backend/"/>
+            <item name="Frontend" href="../org-lsst-ccs-etraveler-frontend/"/>
+            <item name="Backend" href="../org-lsst-ccs-etraveler-backend/"/>
         </menu>
 
         <menu name="Libraries" inherit="bottom">
-            <item name="Yaml" href="../../snakeyaml/"/>
+            <item name="Yaml" href="../snakeyaml/"/>
         </menu>
 
         <menu ref="reports" inherit="bottom" />
