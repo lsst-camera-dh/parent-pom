@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="org-srs-maven-project">
     <bannerLeft>
-        <name>SRS Maven Projects</name>
+        <name>LSST Data Handling Maven Projects</name>
         <href>../../org-srs-maven-project/latestRelease/</href>
     </bannerLeft>
 
