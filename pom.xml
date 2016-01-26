@@ -233,6 +233,7 @@
                     </docletArtifact>    
                     <additionalparam>-views -all -link</additionalparam>   
                     <useStandardDocletOptions>true</useStandardDocletOptions>                
+                    <failOnError>false</failOnError>
                 </configuration>
                 <reportSets>
                     <reportSet>
