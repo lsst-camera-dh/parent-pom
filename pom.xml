@@ -239,7 +239,7 @@
                     <reportSet>
                         <id>non-aggregate</id>
                         <reports>
-                            <report>${maven-javadoc-plugin.report}</report>
+                            <report>javadoc</report>
                         </reports>
                     </reportSet>
                 </reportSets>                
