@@ -166,7 +166,6 @@
                     <source>1.7</source>
                     <target>1.7</target>
                     <verbose>false</verbose>
-                    <compilerArgument>-parameters</compilerArgument>
                 </configuration>
             </plugin>
             <plugin>
