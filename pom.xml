@@ -7,7 +7,7 @@
     <groupId>org.lsst.camera</groupId>
     <artifactId>org-lsst-camera-maven-project</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
   
     <name>LSST DH Parent POM</name>
   
