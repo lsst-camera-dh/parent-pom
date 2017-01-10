@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.lsst.camera</groupId>
         <artifactId>org-lsst-camera-maven-project</artifactId>
-        <version>1.0.4-SNAPSHOT</version>
+        <version>1.0.4</version>
         <relativePath>../</relativePath>
     </parent>
 
@@ -174,7 +174,7 @@
 
     <!-- These are the default properties. They can be overwritten by the profiles for individual experiments -->
     <properties>
-        <org.lsst.camera.project.finalName/>
+        <org.lsst.camera.project.finalName />
         <netbeans.hint.deploy.server>Tomcat60</netbeans.hint.deploy.server>
         <deployment.mode>local</deployment.mode>
         <experiment.name>LSST-CAMERA</experiment.name>
