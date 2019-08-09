@@ -44,12 +44,12 @@
     </scm>
 
     <issueManagement>
-        <url>http://jira.slac.stanford.edu/</url>
+        <url>https://jira.slac.stanford.edu/</url>
     </issueManagement>
 
     <ciManagement>
         <system>hudson</system>
-        <url>http://srs.slac.stanford.edu/hudson/job/${project.artifactId}</url>
+        <url>https://srs.slac.stanford.edu/hudson/job/${project.artifactId}</url>
     </ciManagement>
 
     <distributionManagement>
@@ -57,17 +57,17 @@
         <repository>
             <id>lsst-dh-maven2</id>
             <name>LSST Data Handling Maven Central repository</name>
-            <url>http://srs.slac.stanford.edu/nexus/content/repositories/lsst-dh-maven2/</url>
+            <url>https://srs.slac.stanford.edu/nexus/content/repositories/lsst-dh-maven2/</url>
         </repository>
         <snapshotRepository>
             <id>lsst-dh-maven2-snapshots</id>
             <name>LSST Data Handling Maven Central SNAPSHOTS repository</name>
-            <url>http://srs.slac.stanford.edu/nexus/content/repositories/lsst-dh-maven2-snapshot/</url>
+            <url>https://srs.slac.stanford.edu/nexus/content/repositories/lsst-dh-maven2-snapshot/</url>
         </snapshotRepository>
         <site>
             <id>lsst-dh-maven2-site</id>
             <name>LSST Data Handling Maven Central site repository</name>
-            <url>dav:http://srs.slac.stanford.edu/nexus/content/sites/lsst-dh-site/</url>
+            <url>dav:https://srs.slac.stanford.edu/nexus/content/sites/lsst-dh-site/</url>
         </site>
     </distributionManagement>
 
@@ -76,17 +76,17 @@
         <repository>
             <id>lsst-dh-maven2-public</id>
             <name>LSST Data Handling Maven Central repository</name>
-            <url>http://srs.slac.stanford.edu/nexus/content/groups/lsst-dh-maven2-public/</url>
+            <url>https://srs.slac.stanford.edu/nexus/content/groups/lsst-dh-maven2-public/</url>
         </repository>
         <repository>
             <id>srs-maven2-public</id>
             <name>SRS Maven Central repository</name>
-            <url>http://srs.slac.stanford.edu/nexus/content/groups/srs-maven2-public/</url>
+            <url>https://srs.slac.stanford.edu/nexus/content/groups/srs-maven2-public/</url>
         </repository>
         <repository>
             <id>freehep-maven2-public</id>
             <name>Maven FreeHEP</name>
-            <url>http://srs.slac.stanford.edu/nexus/content/groups/freehep-maven2-public/</url>
+            <url>https://srs.slac.stanford.edu/nexus/content/groups/freehep-maven2-public/</url>
         </repository>
     </repositories>
 
@@ -94,7 +94,7 @@
         <pluginRepository>
             <id>srs-maven2-public</id>
             <name>SRS Maven 2 central repository</name>
-            <url>http://srs.slac.stanford.edu/nexus/content/groups/srs-maven2-public/</url>
+            <url>https://srs.slac.stanford.edu/nexus/content/groups/srs-maven2-public/</url>
         </pluginRepository>
     </pluginRepositories>
 

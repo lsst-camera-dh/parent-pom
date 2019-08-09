@@ -2,13 +2,13 @@
 <project name="org-lsst-ccs-project-pom">
     <bannerLeft>
         <name>LSST Data Handling Projects</name>
-        <href>http://lsst-camera.slac.stanford.edu/</href>
+        <href>https://lsst-camera.slac.stanford.edu/</href>
     </bannerLeft>
 
     <bannerRight>
         <name>SLAC</name>
-        <src>http://home.slac.stanford.edu/images/slacHeaderLogo.gif</src>
-        <href>http://slac.stanford.edu/</href>
+        <src>https://home.slac.stanford.edu/images/slacHeaderLogo.gif</src>
+        <href>https://slac.stanford.edu/</href>
     </bannerRight>
 
 
